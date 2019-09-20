@@ -8,4 +8,9 @@ public class White implements Color {
     public String getColor() {
         return ColorType.WHITE.value();
     }
+
+    @Override
+    public void showColor() {
+        System.out.println(this.getColor());
+    }
 }

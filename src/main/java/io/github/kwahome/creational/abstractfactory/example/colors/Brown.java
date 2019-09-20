@@ -8,4 +8,9 @@ public class Brown implements Color {
     public String getColor() {
         return ColorType.BROWN.value();
     }
+
+    @Override
+    public void showColor() {
+        System.out.println(this.getColor());
+    }
 }

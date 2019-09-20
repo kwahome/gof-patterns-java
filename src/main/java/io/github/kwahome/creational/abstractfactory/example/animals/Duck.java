@@ -11,7 +11,7 @@ public class Duck implements Animal {
     }
 
     @Override
-    public String makeSound() {
-        return AnimalSound.SQUEAK.value();
+    public void makeSound() {
+        System.out.println(this.getAnimal() + ": " + AnimalSound.SQUEAK.value());
     }
 }

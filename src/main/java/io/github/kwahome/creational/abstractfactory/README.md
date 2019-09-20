@@ -35,4 +35,11 @@ iv) Concrete subclasses that implement.extend the AbstractFactory. An object of 
 family of a family of classes implementing/extending (i).
 v) Client - uses AbstractFactory to get concrete objects
 
+## When to Use Abstract Factory Pattern:
+- The client is independent of how we create and compose the objects in the system
+- The system consists of multiple families of objects, and these families are designed to be used together
+- We need a run-time value to construct a particular dependency
+While the pattern is great when creating predefined objects, adding the new ones might be challenging. To support the 
+new type of objects will require changing the AbstractFactory class and all of its subclasses.
+
 

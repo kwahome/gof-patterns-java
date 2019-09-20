@@ -7,11 +7,11 @@ public class Dog implements Animal {
 
     @Override
     public String getAnimal() {
-        return AnimalType.DUCK.value();
+        return AnimalType.DOG.value();
     }
 
     @Override
-    public String makeSound() {
-        return AnimalSound.BARK.value();
+    public void makeSound() {
+        System.out.println(this.getAnimal() + ": " + AnimalSound.BARK.value());
     }
 }

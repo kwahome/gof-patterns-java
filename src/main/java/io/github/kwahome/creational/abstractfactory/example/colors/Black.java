@@ -8,4 +8,9 @@ public class Black implements Color{
     public String getColor() {
         return ColorType.BLACK.value();
     }
+
+    @Override
+    public void showColor() {
+        System.out.println(this.getColor());
+    }
 }
