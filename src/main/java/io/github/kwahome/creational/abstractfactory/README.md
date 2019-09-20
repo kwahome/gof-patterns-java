@@ -1,4 +1,4 @@
-## Abstract Factory
+## Abstract Factory Pattern
 Also known as Kit, the abstract factory pattern is a creational design pattern used to create families of objects where
  the objects of a
 family are designed to work together.
