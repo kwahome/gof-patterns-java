@@ -1,4 +1,4 @@
-package io.github.kwahome.creational.abstractfactory.examples.shapes.geometricshapes;
+package io.github.kwahome.creational.abstractfactory.example.shapes;
 
 /**
  * Concrete line product
