@@ -1,4 +1,4 @@
-package io.github.kwahome.creational.factorymethod;
+package io.github.kwahome.creational.factorymethod.example.car;
 
 import java.util.Optional;
 
