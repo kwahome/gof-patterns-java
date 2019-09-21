@@ -28,11 +28,15 @@ object instantiation.
 
 ## Participants in the Abstract Factory Pattern
 i) Interfaces or an abstract class whose subclasses are instantiated by the abstract factory objects.
+
 ii) Concrete subclasses that implement/extend the interfaces or abstract classes in (i)
+
 iii) AbstractFactory - an interface or an abstract class whose subclasses instantiate a family of classes
  implementing/extending (i)
+
 iv) Concrete subclasses that implement.extend the AbstractFactory. An object of this subclass instantiates a 
 family of a family of classes implementing/extending (i).
+
 v) Client - uses AbstractFactory to get concrete objects
 
 ## When to Use Abstract Factory Pattern:

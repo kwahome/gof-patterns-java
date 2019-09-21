@@ -1,4 +1,4 @@
-package io.github.kwahome.creational.builder.example.person;
+package io.github.kwahome.creational.builder.example.nonnested.person;
 
 public class Person {
     private final String firstName; // mandatory
