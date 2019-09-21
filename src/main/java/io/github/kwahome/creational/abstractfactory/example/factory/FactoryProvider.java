@@ -6,17 +6,23 @@ import io.github.kwahome.creational.abstractfactory.example.factory.enums.Factor
 
 public class FactoryProvider {
     public static Optional<AbstractFactory> getFactory(final FactoryType factoryType) {
+        Optional<AbstractFactory> factoryOptional;
         switch (factoryType) {
             case ANIMAL_FACTORY:
-                return Optional.of(new AnimalFactory());
+                factoryOptional = Optional.of(new AnimalFactory());
+                break;
             case COLOR_FACTORY:
-                return Optional.of(new ColorFactory());
+                factoryOptional = Optional.of(new ColorFactory());
+                break;
             case TWO_DIMENSION_SHAPE_FACTORY:
-                return Optional.of(new TwoDimensionShapeFactory());
+                factoryOptional = Optional.of(new TwoDimensionShapeFactory());
+                break;
             case THREE_DIMENSION_SHAPE_FACTORY:
-                return Optional.of(new ThreeDimensionShapeFactory());
+                factoryOptional = Optional.of(new ThreeDimensionShapeFactory());
+                break;
             default:
-                return Optional.empty();
+                factoryOptional = Optional.empty();
         }
+        return factoryOptional;
     }
 }
