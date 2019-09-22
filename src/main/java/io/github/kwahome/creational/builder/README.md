@@ -5,6 +5,22 @@ concerned with the creation of objects.
 As the name implies, it is an alternative way to construct complex objects. It should be used only when you want to
 build different immutable objects using same object building process.
 
+It separates the construction of a complex object from its representation so that the same construction process can
+create different representations.
+
+## Problem
+An application needs to create the elements of a complex aggregate. The specification for the aggregate exists on 
+secondary storage and one of many representations needs to be built in primary storage.
+
+## Participants
+- Concrete classes whose immutable instances need to be created e.g. `Person` in the example
+- Builder class abstracting creation of instances
+
+## When Would I Use This Pattern?
+The Prototype pattern should be considered when:
+- Constructing a complex object step by step
+- There's need to build a Composite
+
 ## Benefits and Advantages of Builder Pattern
 Builder pattern also helps minimizing the number of parameters in constructor and thus there is no need to pass in null
 for optional parameters to the constructor.

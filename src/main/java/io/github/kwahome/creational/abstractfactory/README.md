@@ -1,19 +1,22 @@
 ## Abstract Factory Pattern
-Also known as Kit, the abstract factory pattern is a creational design pattern used to create families of objects where
- the objects of a
-family are designed to work together.
+Also known as Kit, the abstract factory pattern is a creational design pattern that provides an interface for creating
+families of related or dependent objects without specifying their concrete classes.
 
-In the abstract factory pattern you provide an interface to create families of related or dependent objects, but you do 
-not specify the concrete classes of the objects to create. From the client point of view, it means that a client can 
-create a family of related objects without knowing about the object definitions and their concrete class names.
+It provides a hierarchy that encapsulates: many possible "platforms", and the construction of a suite of "products".
 
+## Problem
+If an application is to be portable, it needs to encapsulate platform dependencies. 
+These "platforms" might include: windowing system, operating system, database, etc. Too often, this encapsulation is not
+engineered in advance, and lots of #ifdef case statements with options for all currently supported platforms begin to 
+procreate like rabbits throughout the code.
+
+## Abstract Factory Pattern vs Factory Method Pattern
 It is easy to confuse the abstract factory pattern with the factory method pattern because both design patterns deal 
 with object creation. Both the patterns advocates the Object Oriented Programming (OOP) principle “Program to an 
 interface, not an implementation” to abstract how the objects are created. Both design patterns help in creating 
 client code that is loosely-coupled with object creation code, but despite the similarities, and the fact that both the 
 patterns are often used together, they do have distinct differences.
 
-## Abstract Factory Pattern vs Factory Method Pattern
 Abstract factory adds another level of abstraction to factory method. While factory method abstracts the way objects are
 created, abstract factory abstracts how the factories are created. The factories in turn abstracts the way objects are 
 created. You will often hear the abstract factory design pattern referred to as a “factory of factories“.
@@ -26,7 +29,7 @@ Another difference is that the factory method pattern uses inheritance while the
 composition. We say that that factory method uses inheritance because this pattern relies on a subclass for the required
 object instantiation. 
 
-## Participants in the Abstract Factory Pattern
+## Participants
 i) Interfaces or an abstract class whose subclasses are instantiated by the abstract factory objects.
 
 ii) Concrete subclasses that implement/extend the interfaces or abstract classes in (i)
@@ -39,7 +42,7 @@ family of a family of classes implementing/extending (i).
 
 v) Client - uses AbstractFactory to get concrete objects
 
-## When to Use Abstract Factory Pattern:
+## When Would I Use This Pattern?
 - The client is independent of how we create and compose the objects in the system
 - The system consists of multiple families of objects, and these families are designed to be used together
 - We need a run-time value to construct a particular dependency
