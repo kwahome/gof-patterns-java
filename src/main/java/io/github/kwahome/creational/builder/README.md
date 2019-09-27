@@ -8,16 +8,26 @@ build different immutable objects using same object building process.
 It separates the construction of a complex object from its representation so that the same construction process can
 create different representations.
 
+## Structure
+![](../../../../../../../../docs/img/builder-pattern.png)
+
 ## Problem
-An application needs to create the elements of a complex aggregate. The specification for the aggregate exists on 
-secondary storage and one of many representations needs to be built in primary storage.
+Imagine a complex object that requires laborious, step-by-step initialization of many fields and nested objects. 
+Such initialization code is usually buried inside a monstrous constructor with lots of parameters. Or even worse: 
+scattered all over the client code.
 
 ## Participants
-- Concrete classes whose immutable instances need to be created e.g. `Person` in the example
-- Builder class abstracting creation of instances
+- `Builder`: an that interface declares product construction steps that are common to all types of builders.
+Concrete
+- `Concrete Builders`: provide different implementations of the construction steps. Concrete builders may produce 
+products that don’t follow the common interface.
+- `Products`: are resulting objects. Products constructed by different builders don’t have to belong to the same
+ class hierarchy or interface.
 
-## When Would I Use This Pattern?
+## When to use this pattern
 The Prototype pattern should be considered when:
+- An application needs to create the elements of a complex aggregate. The specification for the aggregate exists on 
+  secondary storage and one of many representations needs to be built in primary storage.
 - Constructing a complex object step by step
 - There's need to build a Composite
 

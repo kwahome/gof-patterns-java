@@ -8,11 +8,20 @@ called from within the factory method. Objects returned by a factory method are 
 
 Factory Method lets a class defer instantiation to subclasses.
 
+## Structure
+![](../../../../../../../../docs/img/factory-method-pattern.png)
+
 ## Problem
 A framework needs to standardize the architectural model for a range of applications, but allow for individual 
 applications to define their own domain objects and provide for their instantiation.
 
-## When to use factory pattern?
+## Participants
+- `Abstract Products`: declare interfaces for a set of distinct but related products which make up a product family.
+- `Concrete Products`: are various implementations of abstract products, grouped by variants. Each abstract product 
+(chair/sofa) must be implemented in all given variants (Victorian/Modern).
+- `Factory`: implement creation methods of a specific variant of products and creates only those product variants.
+
+## When to use this pattern
 Factory pattern introduces loose coupling between classes which is the most important principle one should consider and 
 apply while designing the application architecture. 
 

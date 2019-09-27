@@ -4,11 +4,22 @@ families of related or dependent objects without specifying their concrete class
 
 It provides a hierarchy that encapsulates: many possible "platforms", and the construction of a suite of "products".
 
+## Structure
+![](../../../../../../../../docs/img/abstract-factory-pattern.png)
+
 ## Problem
 If an application is to be portable, it needs to encapsulate platform dependencies. 
 These "platforms" might include: windowing system, operating system, database, etc. Too often, this encapsulation is not
 engineered in advance, and lots of #ifdef case statements with options for all currently supported platforms begin to 
 procreate like rabbits throughout the code.
+
+## Participants
+- `Abstract Products`: declare interfaces for a set of distinct but related products which make up a product family.
+- `Concrete Products`: are various implementations of abstract products, grouped by variants. Each abstract product 
+(chair/sofa) must be implemented in all given variants (Victorian/Modern).
+- `Abstract Factory`: an interface that declares a set of methods for creating each of the abstract products.
+- `Concrete Factories`:  implement creation methods of the abstract factory. Each concrete factory corresponds to a 
+specific variant of products and creates only those product variants.
 
 ## Abstract Factory Pattern vs Factory Method Pattern
 It is easy to confuse the abstract factory pattern with the factory method pattern because both design patterns deal 
@@ -29,20 +40,7 @@ Another difference is that the factory method pattern uses inheritance while the
 composition. We say that that factory method uses inheritance because this pattern relies on a subclass for the required
 object instantiation. 
 
-## Participants
-i) Interfaces or an abstract class whose subclasses are instantiated by the abstract factory objects.
-
-ii) Concrete subclasses that implement/extend the interfaces or abstract classes in (i)
-
-iii) AbstractFactory - an interface or an abstract class whose subclasses instantiate a family of classes
- implementing/extending (i)
-
-iv) Concrete subclasses that implement.extend the AbstractFactory. An object of this subclass instantiates a 
-family of a family of classes implementing/extending (i).
-
-v) Client - uses AbstractFactory to get concrete objects
-
-## When Would I Use This Pattern?
+## When to use this pattern
 - The client is independent of how we create and compose the objects in the system
 - The system consists of multiple families of objects, and these families are designed to be used together
 - We need a run-time value to construct a particular dependency

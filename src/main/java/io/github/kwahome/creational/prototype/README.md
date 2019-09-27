@@ -2,18 +2,26 @@
 Prototype is a creational design pattern that lets you copy existing objects without making your code dependent on their
 classes.
 
+## Structure
+
+#### A. Basic
+
+![](../../../../../../../../docs/img/prototype-pattern-basic.png)
+
+#### B. Registry
+
+![](../../../../../../../../docs/img/prototype-pattern-registry.png)
+
 ## Problem
 Application "hard wires" the class of object to create in each "new" expression.
 
 ## Participants
-`Prototype` : This is the prototype of actual object as discussed above.
-
-`Prototype registry` : This is used as registry service to have all prototypes accessible using simple string 
+- `Prototype` : This is the prototype of actual object as discussed above.
+- `Prototype registry` : This is used as registry service to have all prototypes accessible using simple string 
 parameters.
- 
-`Client` : Client will be responsible for using registry service to access prototype instances.
+ - `Client` : Client will be responsible for using registry service to access prototype instances.
 
-## When Would I Use This Pattern?
+## When to use this pattern
 The Prototype pattern should be considered when:
 
 - Composition, creation and representation of objects should be decoupled from the system
