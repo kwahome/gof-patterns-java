@@ -1,4 +1,4 @@
-package io.github.kwahome.creational.singleton.example;
+package io.github.kwahome.creational.singleton.example.staticblock;
 
 public class SingletonClass {
     private static SingletonClass instance = null;

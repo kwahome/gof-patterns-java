@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import io.github.kwahome.creational.factorymethod.example.car.Car;
 import io.github.kwahome.creational.factorymethod.example.car.CarFactory;
 import io.github.kwahome.creational.factorymethod.example.car.enums.CarType;
-import io.github.kwahome.creational.factorymethod.example.pizza.Pizza;
 import io.github.kwahome.creational.factorymethod.example.pizza.PizzaFactory;
 import io.github.kwahome.creational.factorymethod.example.pizza.enums.PizzaType;
 
