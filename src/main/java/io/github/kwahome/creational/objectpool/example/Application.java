@@ -16,7 +16,7 @@ public class Application {
         JBDCConnectionPool connectionPool = new JBDCConnectionPool(driver, dsn, user, password);
 
         // get connection
-        Connection connection = connectionPool.acquire();
+        Connection connection = connectionPool.getConnection();
         System.out.println("Acquired connection: " + connection);
         // return connection
         connectionPool.yield(connection);

@@ -12,7 +12,7 @@ public abstract class ConnectionPool implements ObjectPool<Connection> {
     private HashMap<Connection, Long> lock = new HashMap<>();
     private HashMap<Connection, Long> unlock = new HashMap<>();
 
-    public synchronized Connection acquire() {
+    public synchronized Connection getConnection() {
         long timeNow = System.currentTimeMillis();
         Connection connection;
         if (this.unlock.size() > 0) {
