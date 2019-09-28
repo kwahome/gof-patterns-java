@@ -8,7 +8,7 @@ import java.util.HashMap;
 import io.github.kwahome.creational.objectpool.example.ObjectPool;
 
 public abstract class ConnectionPool implements ObjectPool<Connection> {
-    private long deadTime;
+    private long ttl;
     private HashMap<Connection, Long> lock = new HashMap<>();
     private HashMap<Connection, Long> unlock = new HashMap<>();
 
@@ -19,7 +19,7 @@ public abstract class ConnectionPool implements ObjectPool<Connection> {
             Enumeration<Connection> objectEnumeration = Collections.enumeration(unlock.keySet());
             while (objectEnumeration.hasMoreElements()) {
                 connection = objectEnumeration.nextElement();
-                if ((timeNow - this.unlock.get(connection)) > this.deadTime) {
+                if ((timeNow - this.unlock.get(connection)) > this.ttl) {
                     // connection is dead
                     this.unlock.remove(connection);
                     this.destroy(connection);
@@ -42,7 +42,7 @@ public abstract class ConnectionPool implements ObjectPool<Connection> {
         return connection;
     }
 
-    public synchronized void yield(final Connection connection) {
+    public synchronized void release(final Connection connection) {
         this.lock.remove(connection);
         this.unlock.put(connection, System.currentTimeMillis());
     }

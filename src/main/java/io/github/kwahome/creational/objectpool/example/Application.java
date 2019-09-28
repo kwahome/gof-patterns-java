@@ -19,7 +19,7 @@ public class Application {
         Connection connection = connectionPool.getConnection();
         System.out.println("Acquired connection: " + connection);
         // return connection
-        connectionPool.yield(connection);
+        connectionPool.release(connection);
         System.out.println("\n");
     }
 }
