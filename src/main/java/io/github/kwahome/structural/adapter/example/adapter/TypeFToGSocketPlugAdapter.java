@@ -3,10 +3,10 @@ package io.github.kwahome.structural.adapter.example.adapter;
 import io.github.kwahome.structural.adapter.example.plug.TypeFSocketPlug;
 import io.github.kwahome.structural.adapter.example.plug.TypeGSocketPlug;
 
-public class TypeFToGAdapter implements TypeGSocketPlug {
+public class TypeFToGSocketPlugAdapter implements TypeGSocketPlug {
     private TypeFSocketPlug socketPlug;
 
-    public TypeFToGAdapter(final TypeFSocketPlug socketPlug) {
+    public TypeFToGSocketPlugAdapter(final TypeFSocketPlug socketPlug) {
         this.socketPlug = socketPlug;
     }
 
