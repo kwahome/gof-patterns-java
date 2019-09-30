@@ -1,6 +1,6 @@
 ## Decorator Pattern
 Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside 
-despecial wrapper objects that contain the behaviors.
+special wrapper objects that contain the behaviors.
 
 ## Structure
 ![](../../../../../../../../docs/img/decorator-pattern.png)
@@ -12,7 +12,7 @@ events.
 The initial version of the library was based on the `Notifier` class that had only a few fields, a constructor and a 
 single send method. The method could accept a message argument from a client and send the message to a list of emails 
 that were passed to the notifier via its constructor. A third-party app which acted as a client was supposed to create 
-deand configure the notifier object once, and then use it each time something important happened.
+and configure the notifier object once, and then use it each time something important happened.
 
 ![](../../../../../../../../docs/img/decorator-pattern-notification-problem.png)
 
@@ -97,7 +97,7 @@ The client can decorate the object with any custom decorators, as long as they f
 - `ConcreteDecorator` : Are concrete classes that extends Decorator to decorate Components with responsibilities.
 
 ## When to use this pattern
-- When you you need to be able to assign extra behaviors to objects at runtime without breaking the code that uses these 
+- When you need to be able to assign extra behaviors to objects at runtime without breaking the code that uses these 
 objects.
 - When it’s awkward or not possible to extend an object’s behavior using inheritance.
 
