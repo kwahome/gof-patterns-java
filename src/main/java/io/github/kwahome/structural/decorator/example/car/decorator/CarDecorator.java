@@ -2,7 +2,7 @@ package io.github.kwahome.structural.decorator.example.car.decorator;
 
 import io.github.kwahome.structural.decorator.example.car.Car;
 
-public abstract class CarDecorator implements Car {
+public class CarDecorator implements Car {
 
     protected Car car;
 
