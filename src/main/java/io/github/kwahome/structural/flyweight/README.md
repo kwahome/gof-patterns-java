@@ -65,7 +65,8 @@ As you’ve probably guessed by now, an object that only stores the intrinsic st
 - `Client`: Requests `FlyweightFactory` for a flyweight object, and then computes and passes the extrinsic data to it.
 
 ## When to use this pattern
-- Use the Flyweight pattern only when your program must support a huge number of objects which barely fit into available RAM.
+- Use the Flyweight pattern only when your program must support a huge number of objects which barely fit into 
+available RAM.
   
   The benefit of applying the pattern depends heavily on how and where it’s used. It’s most useful when:
   
