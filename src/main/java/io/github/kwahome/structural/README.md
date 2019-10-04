@@ -4,25 +4,25 @@ to realize relationships between entities.
 
 # Patterns
 ### 1. Adapter
-![](../../../../../../..//docs/img/adapter-pattern-overview.png)
+![](../../../../../../../docs/img/adapter-pattern-overview.png)
 
 ### 2. Bridge
-![](../../../../../../..//docs/img/bridge-pattern-overview.png)
+![](../../../../../../../docs/img/bridge-pattern-overview.png)
 
 ### 3. Composite
-![](../../../../../../..//docs/img/composite-pattern-overview.png)
+![](../../../../../../../docs/img/composite-pattern-overview.png)
 
 ### 4. Decorator
-![](../../../../../../..//docs/img/decorator-pattern-overview.png)
+![](../../../../../../../docs/img/decorator-pattern-overview.png)
 
 ### 5. Facade
-![](../../../../../../..//docs/img/facade-pattern-overview.png)
+![](../../../../../../../docs/img/facade-pattern-overview.png)
 
 ### 6. Flyweight
-![](../../../../../../..//docs/img/flyweight-pattern-overview.png)
+![](../../../../../../../docs/img/flyweight-pattern-overview.png)
 
 ### 7. Proxy
-![](../../../../../../..//docs/img/proxy-pattern-overview.png)
+![](../../../../../../../docs/img/proxy-pattern-overview.png)
 
 ## Rules of thumb
 - Adapter makes things work after they're designed; Bridge makes them work before they are.
