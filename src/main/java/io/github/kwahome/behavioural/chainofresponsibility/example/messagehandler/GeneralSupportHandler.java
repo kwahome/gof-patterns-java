@@ -1,8 +1,8 @@
-package io.github.kwahome.behavioural.chainofresponsibility.example;
+package io.github.kwahome.behavioural.chainofresponsibility.example.messagehandler;
 
-public class BillingSupportHandler extends AbstractHandler {
+public class GeneralSupportHandler extends AbstractHandler {
 
-    public BillingSupportHandler(final Handler nextHandler) {
+    public GeneralSupportHandler(final Handler nextHandler) {
         super(nextHandler);
     }
 

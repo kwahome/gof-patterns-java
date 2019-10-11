@@ -1,4 +1,4 @@
-package io.github.kwahome.behavioural.chainofresponsibility.example;
+package io.github.kwahome.behavioural.chainofresponsibility.example.messagehandler;
 
 import java.util.Objects;
 

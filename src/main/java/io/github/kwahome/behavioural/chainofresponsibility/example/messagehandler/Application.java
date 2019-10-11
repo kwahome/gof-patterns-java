@@ -1,4 +1,4 @@
-package io.github.kwahome.behavioural.chainofresponsibility.example;
+package io.github.kwahome.behavioural.chainofresponsibility.example.messagehandler;
 
 public class Application {
     public static void main(String []args) {
