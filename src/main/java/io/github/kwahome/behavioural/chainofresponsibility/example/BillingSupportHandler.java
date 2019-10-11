@@ -1,12 +1,14 @@
 package io.github.kwahome.behavioural.chainofresponsibility.example;
 
-public class BillingSupportHandler implements Handler {
+public class BillingSupportHandler extends AbstractHandler {
 
-    public BillingSupportHandler() {
+    public BillingSupportHandler(final Handler nextHandler) {
+        super(nextHandler);
     }
 
     @Override
     public void handle(final String message) {
         System.out.println(this.getClass().getSimpleName() + ": Processing message: " + message);
+        this.forwardToNextHandler(message);
     }
 }
