@@ -9,6 +9,6 @@ public class BillingSupportHandler extends AbstractHandler {
     @Override
     public void handle(final String message) {
         System.out.println(this.getClass().getSimpleName() + ": Processing message: " + message);
-        this.forwardToNextHandler(message);
+        this.invokeNextHandler(message);
     }
 }

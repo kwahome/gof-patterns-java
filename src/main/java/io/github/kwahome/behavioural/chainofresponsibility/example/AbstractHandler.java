@@ -14,7 +14,7 @@ public abstract class AbstractHandler implements Handler {
         return nextHandler;
     }
 
-    protected void forwardToNextHandler(final String message) {
+    protected void invokeNextHandler(final String message) {
         if (Objects.nonNull(this.getNextHandler())) {
             System.out.println(this.getClass().getSimpleName() + ": Forwarding message to: " +
                     this.getNextHandler().getClass().getSimpleName());
