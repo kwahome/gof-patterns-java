@@ -4,6 +4,10 @@ Upon receiving a request, each handler decides either to process the request or 
 chain.
 
 ## Structure
+
+![](../../../../../../../../docs/img/chain-of-responsibility-pattern.png)
+
+## Problem
 Imagine that you’re working on an online ordering system. You want to restrict access to the system so only 
 authenticated users can create orders. Also, users who have administrative permissions must have full access to all 
 orders.
